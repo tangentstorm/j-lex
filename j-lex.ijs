@@ -85,4 +85,7 @@ jlex =: {{
   if. 'literal' -: datatype y do. y =. ,. LF cut y -. CR end.
   (jtype;]) L:0 jtokens each y }}
 
+NB. jcut is like ;: but preserves whitespace
+jcut =: {{>>L:_1 {:L:1 jlex y}}
+
 jlex_z_ =: jlex_jlex_

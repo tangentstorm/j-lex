@@ -18,6 +18,14 @@
     │└──────┴─────┴──────┴─────┴──────┴─────┴─────┴─────┴──────┘│
     └───────────────────────────────────────────────────────────┘
 
+       jcut_jlex_ '{{ i. 10,y }}'  NB. like ;: but preserve spaces
+    ┌──┬─┬──┬─┬──┬─┬─┬─┬──┐
+    │{{│ │i.│ │10│,│y│ │}}│
+    └──┴─┴──┴─┴──┴─┴─┴─┴──┘
+
+       jtype_jlex_ '{{'  NB. return the type code for a single token
+    D
+
 See `help_jlex_` for what the token descriptor codes mean.
 
 ## Known Limitations
