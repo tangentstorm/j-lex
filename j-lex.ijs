@@ -49,7 +49,7 @@ jcut =: verb define
 NB. helpers for jtyp
 isName =: [: # '^[[:alpha:]]\w*$' & rxmatches
 reCtrl =: '^(assert|break|continue|(goto|label|for)(_\w+)|do|end|if|else|elseif|return'
-reCtrl =: reCtrl,'|select|f?case|throw|while|whilst)[.]'
+reCtrl =: reCtrl,'|select|f?case|throw|while|whilst|try|catch[dt]?)[.]'
 isCtrl =: [: #  reCtrl & rxmatches
 isCopula =: [: # '=[.:]' & rxmatches
 isParen =: (1=#) *. [: +./@, '()' -:"0 {.
